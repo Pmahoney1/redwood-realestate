@@ -135,7 +135,7 @@ h4 { font-size: clamp(1.1rem, 1.5vw, 1.4rem); }
 .nav__logo-text { display: flex; flex-direction: column; line-height: 1.1; }
 .nav__logo-name {
   font-family: var(--font-heading);
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: var(--green-900);
   letter-spacing: -0.01em;
@@ -1096,11 +1096,9 @@ h4 { font-size: clamp(1.1rem, 1.5vw, 1.4rem); }
   width: 180px;
   height: auto;
   object-fit: contain;
-  opacity: 0.7;
-  filter: brightness(1.8);
   transition: opacity 0.3s ease;
 }
-.footer__logo:hover { opacity: 0.9; }
+.footer__logo:hover { opacity: 0.85; }
 .footer__heading {
   font-family: var(--font-heading);
   font-size: 1.1rem;
