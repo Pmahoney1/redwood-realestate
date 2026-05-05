@@ -335,10 +335,10 @@
             </div>
           </div>
           <div class="why-card reveal reveal--delay-2">
-            <div class="why-card__icon">${icons.users}</div>
+            <div class="why-card__icon">${icons.key}</div>
             <div>
-              <h4 class="why-card__title">Personal Attention</h4>
-              <p class="why-card__text">You won't be passed off to an assistant. When you work with me, you work directly with me — from first call to closing day and beyond.</p>
+              <h4 class="why-card__title">Non-Traditional Transactions</h4>
+              <p class="why-card__text">Not every deal fits a conventional mold. I specialize in creative financing strategies — loan assumptions, wrap-around mortgages (subject-to), seller financing, lease options, and land contracts — giving my clients more paths to close.</p>
             </div>
           </div>
           <div class="why-card reveal reveal--delay-3">
@@ -450,6 +450,9 @@
             </p>
             <p style="margin-top: 16px; color: var(--gray-600); line-height: 1.85; font-size: 1.05rem;">
               With years of experience across Sonoma, Marin, Napa, and Mendocino counties, I bring a level of local market knowledge that only comes from truly knowing the land. My clients don't just get a realtor — they get a trusted advisor who's invested in their success long after closing day.
+            </p>
+            <p style="margin-top: 16px; color: var(--gray-600); line-height: 1.85; font-size: 1.05rem;">
+              What truly sets me apart is my deep knowledge of non-traditional and creative financing strategies. In today's market, conventional isn't always the best path. I specialize in structuring deals using loan assumptions, wrap-around mortgages (subject-to), seller financing, lease options, land contracts, and other creative approaches that open doors traditional financing can't. Whether a buyer needs an alternative path to homeownership or a seller wants to maximize their return through flexible terms, I have the expertise to make it happen.
             </p>
             <div style="margin-top: 32px;">
               <a href="#/contact" data-link class="btn btn--dark">Work With Me <span class="btn__arrow">→</span></a>
@@ -579,6 +582,28 @@
               <h3 class="blog-card__title">Healdsburg vs. Petaluma: Which Town Is Right for You?</h3>
               <p class="blog-card__excerpt">Two of Sonoma County's most popular towns, compared side by side — lifestyle, home prices, commute times, and community character.</p>
               <span class="blog-card__meta">February 28, 2026 · 9 min read</span>
+            </div>
+          </div>
+          <div class="blog-card reveal reveal--delay-1" onclick="window.location.hash='#/blog/creative-financing-2026'">
+            <div class="blog-card__img">
+              <img src="images/hero-1.jpg" alt="Sonoma County vineyards" loading="lazy" />
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Creative Financing</span>
+              <h3 class="blog-card__title">Why Creative Financing Is Having a Moment in 2026</h3>
+              <p class="blog-card__excerpt">High interest rates and more sellers than buyers are pushing creative deal structures into the mainstream. Here's why — and how it works.</p>
+              <span class="blog-card__meta">February 15, 2026 · 8 min read</span>
+            </div>
+          </div>
+          <div class="blog-card reveal reveal--delay-2" onclick="window.location.hash='#/blog/loan-assumptions-explained'">
+            <div class="blog-card__img">
+              <img src="images/hero-2.jpg" alt="Santa Rosa neighborhood" loading="lazy" />
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__tag">Creative Financing</span>
+              <h3 class="blog-card__title">Loan Assumptions Explained: How to Take Over a Seller's Low Rate</h3>
+              <p class="blog-card__excerpt">FHA and VA loans are assumable — meaning a buyer can inherit the seller's interest rate. Here's how it works and why it's a game-changer right now.</p>
+              <span class="blog-card__meta">February 1, 2026 · 7 min read</span>
             </div>
           </div>
         </div>
@@ -750,6 +775,91 @@
 
         <h2>My Recommendation</h2>
         <p>Choose Healdsburg if you prioritize wine country lifestyle, don't need to commute, and have a higher budget. Choose Petaluma if you want more value per dollar, better commute access, and a more diverse community feel. Either way, you're choosing one of Northern California's best places to live.</p>
+      `
+    },
+    'creative-financing-2026': {
+      title: 'Why Creative Financing Is Having a Moment in 2026',
+      tag: 'Creative Financing',
+      date: 'February 15, 2026',
+      read: '8 min read',
+      img: 'images/hero-1.jpg',
+      content: `
+        <p>If you've been paying attention to the real estate market over the past two years, you've noticed something: the old playbook isn't working for everyone anymore. Interest rates hovering in the mid-to-high 5% range, inventory that's grown faster than demand, and a growing number of sellers competing for a shrinking pool of qualified buyers. The result? Creative financing strategies that were once considered niche are moving squarely into the mainstream.</p>
+
+        <h2>The Market Conditions Driving the Shift</h2>
+        <p>Let's start with the numbers. In many Northern California markets — including right here in Sonoma County — we're seeing more homes listed than there are ready buyers. That's a significant shift from the frenzy of 2021-2022, when buyers were waiving every contingency and bidding $100K over asking just to get in the door.</p>
+        <p>At the same time, interest rates remain elevated compared to the historic lows of 2020-2021. A buyer who would have qualified for a $700K home at 3% may only qualify for $550K at 5.75%. That's a massive gap — and it's leaving sellers with fewer offers and longer days on market.</p>
+        <p>This is exactly the environment where creative financing thrives.</p>
+
+        <h2>What Is Creative Financing?</h2>
+        <p>Creative financing is any deal structure that goes beyond the traditional "buyer gets a conventional mortgage from a bank" model. These strategies have been around for decades, but they become especially powerful when conventional lending tightens. The most common approaches include:</p>
+        <ul>
+          <li><strong>Loan Assumptions:</strong> The buyer takes over the seller's existing mortgage — including their interest rate. If the seller locked in at 2.75% in 2021, the buyer inherits that rate. This is available on FHA and VA loans, and it's an incredible tool in today's market.</li>
+          <li><strong>Seller Financing:</strong> The seller acts as the lender, carrying a note for part or all of the purchase price. Terms are negotiated directly between buyer and seller, offering flexibility that banks can't match.</li>
+          <li><strong>Wrap-Around Mortgages (Subject-To):</strong> The buyer makes payments to the seller, who continues paying the existing mortgage. The buyer's payment "wraps around" the original loan. This keeps the seller's low-rate mortgage in place while giving the buyer access to the property.</li>
+          <li><strong>Lease Options:</strong> The buyer leases the property with an option to purchase at a predetermined price within a set timeframe. A portion of the monthly rent may go toward the eventual down payment.</li>
+          <li><strong>Land Contracts:</strong> Also called contracts for deed — the seller retains legal title while the buyer makes payments over time. Once the contract is fulfilled, title transfers to the buyer.</li>
+        </ul>
+
+        <h2>Why Sellers Should Pay Attention</h2>
+        <p>If you're a seller sitting on a property that's been on the market for 60+ days, creative financing can be the difference between a stale listing and a closed deal. By offering flexible terms — whether that's seller financing, a lease option, or allowing a loan assumption — you dramatically expand your buyer pool.</p>
+        <p>You also gain potential advantages: seller financing can generate consistent monthly income with interest, a subject-to deal can sell your home faster at full asking price, and lease options give you cash flow while locking in a future sale.</p>
+
+        <h2>Why Buyers Should Pay Attention</h2>
+        <p>If today's interest rates have priced you out of conventional lending, creative financing can be your path to homeownership. Assuming a seller's 2.75% FHA loan saves you hundreds of dollars per month compared to a new 5.75% mortgage. Seller financing can offer terms that banks won't. Lease options let you lock in a price while you build credit or save for a larger down payment.</p>
+
+        <h2>Working With an Agent Who Knows This Space</h2>
+        <p>Here's the reality: most real estate agents don't understand creative financing. They've been trained on conventional transactions, and anything outside that box is unfamiliar territory. That's where I come in. I've built my practice around understanding these strategies inside and out — how to structure them, how to protect both parties, and how to get them to the closing table.</p>
+        <p>If you're a buyer or seller who's feeling stuck in today's market, let's talk. There may be a path forward that you haven't considered yet.</p>
+      `
+    },
+    'loan-assumptions-explained': {
+      title: "Loan Assumptions Explained: How to Take Over a Seller's Low Rate",
+      tag: 'Creative Financing',
+      date: 'February 1, 2026',
+      read: '7 min read',
+      img: 'images/hero-2.jpg',
+      content: `
+        <p>Imagine buying a home and inheriting the seller's 2.75% interest rate instead of taking out a new mortgage at 5.75%. That's not a hypothetical — it's exactly what a loan assumption allows you to do. And in today's rate environment, it might be the most powerful tool in a buyer's arsenal.</p>
+
+        <h2>What Is a Loan Assumption?</h2>
+        <p>A loan assumption is exactly what it sounds like: the buyer assumes (takes over) the seller's existing mortgage. You step into their loan with the same interest rate, remaining balance, and repayment terms. The original borrower is released from the obligation, and you take over the monthly payments.</p>
+        <p>Not all loans are assumable. Conventional mortgages typically have "due on sale" clauses that prevent assumptions. But two major loan types are assumable by design:</p>
+        <ul>
+          <li><strong>FHA Loans:</strong> Fully assumable, provided the buyer qualifies with the lender.</li>
+          <li><strong>VA Loans:</strong> Fully assumable, and the buyer doesn't even need to be a veteran (though the seller's VA entitlement may remain tied up unless the buyer is also a veteran).</li>
+        </ul>
+
+        <h2>Why This Matters Right Now</h2>
+        <p>Between 2020 and early 2022, millions of homeowners locked in FHA and VA mortgages at historically low rates — many between 2.5% and 3.5%. Those loans are still out there, and they're still assumable.</p>
+        <p>Let's do the math on a real scenario:</p>
+        <ul>
+          <li>A seller has an FHA loan with a $400,000 remaining balance at 2.75%</li>
+          <li>Monthly principal and interest: approximately $1,633</li>
+          <li>A new $400,000 mortgage at 5.75% would cost approximately $2,334/month</li>
+          <li><strong>That's a $701/month savings — $8,412 per year — by assuming the existing loan</strong></li>
+        </ul>
+        <p>Over the life of the loan, the savings can be staggering. It's the closest thing to a "cheat code" in real estate right now.</p>
+
+        <h2>How the Process Works</h2>
+        <p><strong>Step 1: Identify an assumable loan.</strong> Not every listing advertises this. A knowledgeable agent (like me) will ask the right questions and identify properties with assumable FHA or VA loans.</p>
+        <p><strong>Step 2: Negotiate the deal.</strong> The purchase price may be higher than the loan balance. The buyer needs to cover the difference between the purchase price and the remaining loan balance — either in cash or with a second lien (sometimes seller financing can bridge this gap).</p>
+        <p><strong>Step 3: Qualify with the lender.</strong> The buyer must still qualify with the existing lender. For FHA assumptions, you'll need to meet standard FHA credit and income requirements. For VA assumptions, guidelines vary but are generally flexible.</p>
+        <p><strong>Step 4: Close the assumption.</strong> The lender processes the assumption, which can take 45-90 days (sometimes longer, depending on the servicer). Patience is key — the savings are worth the wait.</p>
+
+        <h2>The Equity Gap Challenge</h2>
+        <p>The main challenge with assumptions is the equity gap. If a seller bought their home for $500K three years ago with an FHA loan and the remaining balance is $470K, but the home is now worth $600K, the buyer needs to bring $130K to the table to cover the difference between the purchase price and the assumable loan balance.</p>
+        <p>This is where creative structuring comes in. Options include:</p>
+        <ul>
+          <li>A larger cash down payment</li>
+          <li>A second mortgage or HELOC from another lender</li>
+          <li>Seller financing on the gap amount</li>
+          <li>A combination of approaches</li>
+        </ul>
+
+        <h2>Is a Loan Assumption Right for You?</h2>
+        <p>If you're a buyer struggling with today's rates, absolutely explore this option. If you're a seller with an FHA or VA loan from 2020-2022, your assumable mortgage is a competitive advantage — it can attract buyers who might otherwise not be able to afford your home.</p>
+        <p>This is one of my areas of expertise. I've helped both buyers and sellers structure assumption deals that work for everyone involved. If you want to know whether a loan assumption makes sense in your situation, let's talk.</p>
       `
     }
   };
