@@ -126,12 +126,12 @@ h4 { font-size: clamp(1.1rem, 1.5vw, 1.4rem); }
   z-index: 1001;
 }
 .nav__logo-icon {
-  width: 36px;
-  height: 36px;
-  color: var(--green-700);
-  transition: color 0.3s ease;
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
 }
-.nav__logo:hover .nav__logo-icon { color: var(--green-500); }
+.nav__logo:hover .nav__logo-icon { opacity: 0.85; }
 .nav__logo-text { display: flex; flex-direction: column; line-height: 1.1; }
 .nav__logo-name {
   font-family: var(--font-heading);
