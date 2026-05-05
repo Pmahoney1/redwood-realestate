@@ -339,6 +339,7 @@
             <div>
               <h4 class="why-card__title">Non-Traditional Transactions</h4>
               <p class="why-card__text">Not every deal fits a conventional mold. I specialize in creative financing strategies — loan assumptions, wrap-around mortgages (subject-to), seller financing, lease options, and land contracts — giving my clients more paths to close.</p>
+              <a href="#/creative-financing" data-link class="service-card__link" style="margin-top: 12px;">Learn More <span>→</span></a>
             </div>
           </div>
           <div class="why-card reveal reveal--delay-3">
@@ -1098,6 +1099,249 @@
     `;
   }
 
+  // ── CREATIVE FINANCING ──
+  function creativeFinancingPage() {
+    return `
+    <section class="page-hero">
+      <div class="page-hero__bg">
+        <img src="images/hero-1.jpg" alt="Sonoma County vineyards" loading="eager" />
+      </div>
+      <div class="page-hero__overlay"></div>
+      <div class="page-hero__content">
+        <span class="hero__badge reveal">Beyond Conventional</span>
+        <h1 class="reveal reveal--delay-1">Creative <em>Financing</em></h1>
+        <p class="page-hero__sub reveal reveal--delay-2">Not every deal fits a conventional mold. I specialize in non-traditional transaction structures that create opportunities where others see dead ends.</p>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="section">
+      <div class="section__inner">
+        <div class="cf-intro reveal">
+          <div class="cf-intro__text">
+            <span class="section__label">Why Creative Financing?</span>
+            <h2>The Market Has <span class="text-accent">Changed</span></h2>
+            <p style="margin-top: 20px; color: var(--gray-600); line-height: 1.85; font-size: 1.05rem;">
+              Interest rates in the mid-to-high 5% range. More sellers than buyers. Tighter lending standards. The traditional path to buying or selling a home doesn't work for everyone in today's market — and it doesn't have to.
+            </p>
+            <p style="margin-top: 16px; color: var(--gray-600); line-height: 1.85; font-size: 1.05rem;">
+              Creative financing strategies have been used in real estate for decades, but they become especially powerful in markets like this one. These aren't loopholes or gimmicks — they're legitimate, well-established transaction structures that can help buyers afford homes they otherwise couldn't, and help sellers move properties that might otherwise sit.
+            </p>
+            <p style="margin-top: 16px; color: var(--gray-600); line-height: 1.85; font-size: 1.05rem;">
+              As a licensed Realtor with deep expertise in these strategies, I help my clients explore every option available. Below is a breakdown of the most common creative financing approaches I work with.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOAN ASSUMPTIONS -->
+    <section class="section" style="background: var(--cream);" id="loan-assumptions">
+      <div class="section__inner">
+        <div class="cf-section reveal">
+          <div class="cf-section__number">01</div>
+          <div class="cf-section__content">
+            <h2>Loan <span class="text-accent">Assumptions</span></h2>
+            <p class="cf-section__lead">Take over the seller's existing mortgage — including their interest rate.</p>
+
+            <h3>How It Works</h3>
+            <p>A loan assumption allows the buyer to step into the seller's existing mortgage with the same interest rate, remaining balance, and repayment terms. The original borrower is released from the obligation, and the buyer takes over the monthly payments. It's one of the most powerful tools available in today's high-rate environment.</p>
+
+            <h3>Which Loans Are Assumable?</h3>
+            <ul>
+              <li><strong>FHA Loans</strong> — Fully assumable, provided the buyer qualifies with the lender. Standard FHA credit and income requirements apply.</li>
+              <li><strong>VA Loans</strong> — Fully assumable, and the buyer doesn't need to be a veteran. However, the seller's VA entitlement may remain tied to the loan unless the buyer is also VA-eligible.</li>
+              <li><strong>Conventional Loans</strong> — Typically not assumable due to "due on sale" clauses.</li>
+            </ul>
+
+            <h3>Why It Matters Right Now</h3>
+            <p>Between 2020 and early 2022, millions of homeowners locked in FHA and VA mortgages at historically low rates — many between 2.5% and 3.5%. Those loans are still out there, and they're still assumable.</p>
+
+            <div class="cf-callout">
+              <div class="cf-callout__title">Real-World Example</div>
+              <p>A seller has an FHA loan with a $400,000 remaining balance at 2.75%. Monthly P&I: ~$1,633. A new mortgage at 5.75% on the same amount would cost ~$2,334/month. <strong>That's $701/month in savings — $8,412 per year — by assuming the existing loan.</strong></p>
+            </div>
+
+            <h3>Key Considerations</h3>
+            <ul>
+              <li>The buyer must cover the difference between the purchase price and the remaining loan balance (the "equity gap") — either in cash, a second lien, or seller financing.</li>
+              <li>Processing times can be 45-90+ days depending on the loan servicer. Patience pays off.</li>
+              <li>The buyer must qualify with the existing lender — this isn't a no-doc shortcut.</li>
+            </ul>
+
+            <h3>Best For</h3>
+            <p>Buyers who want to lock in a rate significantly below today's market. Sellers with low-rate FHA/VA loans who want a competitive edge on their listing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WRAP-AROUND / SUBJECT-TO -->
+    <section class="section" id="subject-to">
+      <div class="section__inner">
+        <div class="cf-section reveal">
+          <div class="cf-section__number">02</div>
+          <div class="cf-section__content">
+            <h2>Wrap-Around Mortgages <span class="text-accent">(Subject-To)</span></h2>
+            <p class="cf-section__lead">The buyer takes ownership while the seller's existing mortgage stays in place.</p>
+
+            <h3>How It Works</h3>
+            <p>In a subject-to transaction, the buyer purchases the property "subject to" the existing mortgage. The seller's loan remains in their name, but the buyer takes title to the property and makes the payments. In a wrap-around structure, the buyer's payment to the seller "wraps around" the existing mortgage — the seller collects the buyer's payment and continues paying the original loan.</p>
+
+            <h3>Why It's Powerful</h3>
+            <p>This strategy preserves a seller's low interest rate without going through the formal assumption process. It can close faster, doesn't require lender approval, and offers flexibility that traditional deals can't match. The seller benefits from getting their property sold (often at full asking price), while the buyer benefits from effectively accessing a below-market rate.</p>
+
+            <div class="cf-callout">
+              <div class="cf-callout__title">How the Structure Looks</div>
+              <p>Seller owes $350K at 3.0%. Buyer purchases for $500K. Buyer puts $100K down, then makes monthly payments to the seller on the remaining $400K at an agreed-upon rate (say 4.5%). Seller continues paying the original $350K mortgage at 3.0% and keeps the spread. <strong>Buyer gets a rate well below market. Seller gets full price plus monthly income.</strong></p>
+            </div>
+
+            <h3>Key Considerations</h3>
+            <ul>
+              <li><strong>Due-on-sale clause:</strong> Most conventional mortgages include this clause, which technically allows the lender to call the loan due upon transfer of ownership. In practice, lenders rarely enforce this as long as payments are current — but it's a risk that must be understood and disclosed.</li>
+              <li><strong>Legal structure matters:</strong> Proper documentation, escrow arrangements, and title insurance are critical. This is not a DIY transaction.</li>
+              <li><strong>Trust between parties:</strong> Both buyer and seller must be protected through clear contracts and often a loan servicing company that handles payments.</li>
+            </ul>
+
+            <h3>Best For</h3>
+            <p>Sellers who need to move quickly and want to avoid the assumption timeline. Buyers who may not qualify for conventional financing but can demonstrate ability to pay. Situations where both parties benefit from flexible, negotiated terms.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELLER FINANCING -->
+    <section class="section" style="background: var(--cream);" id="seller-financing">
+      <div class="section__inner">
+        <div class="cf-section reveal">
+          <div class="cf-section__number">03</div>
+          <div class="cf-section__content">
+            <h2>Seller <span class="text-accent">Financing</span></h2>
+            <p class="cf-section__lead">The seller becomes the lender, carrying a note for part or all of the purchase price.</p>
+
+            <h3>How It Works</h3>
+            <p>Instead of (or in addition to) the buyer obtaining a bank mortgage, the seller agrees to finance the purchase directly. The buyer makes a down payment, and the seller carries a promissory note for the remaining balance. The buyer makes monthly payments — including principal and interest — directly to the seller over an agreed-upon term.</p>
+
+            <h3>Common Structures</h3>
+            <ul>
+              <li><strong>Full seller carry:</strong> The seller finances the entire purchase price (minus down payment). No bank involved at all.</li>
+              <li><strong>Partial seller carry:</strong> The buyer gets a traditional first mortgage for a portion, and the seller carries a second note for the gap. This is common when the buyer's down payment doesn't meet conventional requirements.</li>
+              <li><strong>Balloon terms:</strong> Many seller-financed deals include a balloon payment after 3-7 years, giving the buyer time to refinance into a conventional loan.</li>
+            </ul>
+
+            <div class="cf-callout">
+              <div class="cf-callout__title">Why Sellers Consider This</div>
+              <p>A seller who owns their home free and clear (no mortgage) can earn steady monthly income at an interest rate higher than a savings account or CD. On a $600K seller-financed note at 5%, the seller earns $30,000/year in interest income — <strong>secured by real property they already know and trust.</strong></p>
+            </div>
+
+            <h3>Key Considerations</h3>
+            <ul>
+              <li>Terms are fully negotiable — interest rate, loan term, amortization schedule, prepayment penalties, and balloon dates are all on the table.</li>
+              <li>A proper promissory note and deed of trust must be recorded. Title insurance protects both parties.</li>
+              <li>The Dodd-Frank Act imposes certain requirements on seller-financed transactions. Working with a knowledgeable agent and real estate attorney is essential.</li>
+              <li>Sellers should verify the buyer's creditworthiness — just as a bank would.</li>
+            </ul>
+
+            <h3>Best For</h3>
+            <p>Sellers who own free and clear and want passive income. Buyers who are creditworthy but don't fit neatly into conventional lending boxes — self-employed borrowers, recent credit events, or those with non-traditional income sources. Properties that are difficult to finance conventionally (rural, mixed-use, unique).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAND CONTRACTS -->
+    <section class="section" id="land-contracts">
+      <div class="section__inner">
+        <div class="cf-section reveal">
+          <div class="cf-section__number">04</div>
+          <div class="cf-section__content">
+            <h2>Land Contracts <span class="text-accent">(Contract for Deed)</span></h2>
+            <p class="cf-section__lead">Also known as an Agreement for Sale — the seller retains title while the buyer makes payments over time.</p>
+
+            <h3>How It Works</h3>
+            <p>In a land contract, the buyer and seller agree to a purchase price, down payment, interest rate, and payment schedule — similar to seller financing. The key difference: the seller retains legal title to the property until the contract terms are fulfilled (typically when the balance is paid in full or the buyer refinances). The buyer receives "equitable title," meaning they have the right to possess, use, and build equity in the property.</p>
+
+            <h3>How It Differs from Seller Financing</h3>
+            <ul>
+              <li><strong>Seller Financing:</strong> Title transfers to the buyer at closing. A deed of trust secures the seller's note. If the buyer defaults, the seller must foreclose.</li>
+              <li><strong>Land Contract:</strong> Title stays with the seller until the contract is fulfilled. If the buyer defaults, the process for the seller to reclaim the property is typically faster and less expensive than foreclosure (varies by state).</li>
+            </ul>
+
+            <div class="cf-callout">
+              <div class="cf-callout__title">When This Makes Sense</div>
+              <p>A buyer needs 18-24 months to repair their credit before qualifying for a conventional mortgage. A land contract lets them move into the property now, build equity through monthly payments, and refinance into a traditional loan when they're ready. <strong>The seller gets monthly income and a committed buyer. The buyer gets a clear path to ownership.</strong></p>
+            </div>
+
+            <h3>Key Considerations</h3>
+            <ul>
+              <li>California has specific laws governing land contracts (also called installment land sale contracts) — including buyer protections around late payments and default remedies. Compliance is non-negotiable.</li>
+              <li>The contract should be recorded with the county to protect the buyer's equitable interest.</li>
+              <li>Both parties should work with legal counsel to ensure the agreement is fair, clear, and enforceable.</li>
+              <li>Property insurance, taxes, and maintenance responsibilities should be clearly defined in the contract.</li>
+            </ul>
+
+            <h3>Best For</h3>
+            <p>Buyers who need time to qualify for conventional financing but are ready to commit. Sellers who want to sell but are willing to wait for full payment in exchange for monthly income and a higher sale price. Rural properties or situations where traditional lending is difficult.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEASE OPTIONS -->
+    <section class="section" style="background: var(--cream);" id="lease-options">
+      <div class="section__inner">
+        <div class="cf-section reveal">
+          <div class="cf-section__number">05</div>
+          <div class="cf-section__content">
+            <h2>Lease <span class="text-accent">Options</span></h2>
+            <p class="cf-section__lead">Rent the property today with the option to buy it tomorrow — at a price locked in now.</p>
+
+            <h3>How It Works</h3>
+            <p>A lease option combines a standard rental agreement with an option to purchase the property at a predetermined price within a set timeframe (typically 1-3 years). The buyer/tenant pays an upfront option fee (usually 1-5% of the purchase price) for the right — but not the obligation — to buy. A portion of the monthly rent may be credited toward the eventual down payment.</p>
+
+            <h3>The Two Components</h3>
+            <ul>
+              <li><strong>The Lease:</strong> A standard rental agreement that defines monthly rent, lease term, maintenance responsibilities, and other typical landlord-tenant terms.</li>
+              <li><strong>The Option:</strong> A separate agreement giving the tenant the exclusive right to purchase the property at a specified price before the option expires. The option fee is typically non-refundable but is credited toward the purchase price if the tenant exercises the option.</li>
+            </ul>
+
+            <div class="cf-callout">
+              <div class="cf-callout__title">Example Structure</div>
+              <p>Purchase price locked at $550K. Option fee: $15K (credited toward purchase). Monthly rent: $3,200, with $500/month credited toward the down payment. After 2 years, the tenant has accumulated $27K in credits ($15K option + $12K rent credits). <strong>They exercise the option, apply the credits, and close on the home — potentially with enough equity built in to qualify for favorable financing.</strong></p>
+            </div>
+
+            <h3>Key Considerations</h3>
+            <ul>
+              <li>The option fee is typically non-refundable. If the tenant decides not to buy, they lose it.</li>
+              <li>The purchase price is locked in upfront — this benefits the buyer in an appreciating market, but could be a disadvantage if values decline.</li>
+              <li>The tenant is usually responsible for maintenance and minor repairs during the lease period, similar to a homeowner.</li>
+              <li>Clear documentation is essential. The lease and option should be separate agreements, both reviewed by legal counsel.</li>
+              <li>California has specific consumer protection laws around lease-option agreements. Compliance matters.</li>
+            </ul>
+
+            <h3>Best For</h3>
+            <p>Buyers who need time to save a down payment, improve their credit, or establish income history. Sellers who want rental income while locking in a future sale at today's price. Situations where both parties benefit from a "try before you buy" arrangement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="section__inner">
+        <div class="cta-banner reveal--scale">
+          <h2>Interested in Creative Financing?</h2>
+          <p>Every situation is different. Let's talk about your goals and figure out which strategy — or combination of strategies — makes the most sense for you.</p>
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative;">
+            <a href="#/contact" data-link class="btn btn--primary">Schedule a Consultation <span class="btn__arrow">→</span></a>
+            <a href="tel:+17075833304" class="btn btn--outline" style="border-color: rgba(255,255,255,0.35); color: white;">Call (707) 583-3304</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    `;
+  }
+
   // ── ROUTES ──
   const routes = {
     '/': homePage,
@@ -1105,6 +1349,7 @@
     '/blog': blogPage,
     '/faq': faqPage,
     '/contact': contactPage,
+    '/creative-financing': creativeFinancingPage,
   };
 
   // Handle blog post routes dynamically
