@@ -27,14 +27,36 @@
     document.body.style.overflow = '';
   }
 
-  // ── ROUTER ──
+  // ── ROUTER (History API) ──
   function getRoute() {
-    return window.location.hash.slice(1) || '/';
+    return window.location.pathname || '/';
   }
 
-  function navigate() {
+  function navigateTo(path) {
+    history.pushState(null, '', path);
+    renderRoute();
+  }
+
+  // expose for onclick handlers
+  window.navigateTo = navigateTo;
+
+  function renderRoute() {
     closeMenu();
     const route = getRoute();
+
+    // blog post routes
+    if (route.startsWith('/blog/')) {
+      const slug = route.replace('/blog/', '');
+      app.innerHTML = '';
+      app.className = 'page-transition';
+      app.innerHTML = blogPostPage(slug);
+      window.scrollTo(0, 0);
+      updateActiveLink('/blog');
+      initScrollReveal();
+      initParallax();
+      return;
+    }
+
     const page = routes[route] || routes['/'];
     app.innerHTML = '';
     app.className = 'page-transition';
@@ -46,12 +68,13 @@
     initParallax();
     initCountUp();
     initContactForm();
+    initHeroCarousel();
   }
 
   function updateActiveLink(route) {
     document.querySelectorAll('.nav__link').forEach(link => {
       const href = link.getAttribute('href');
-      if (href === '#' + route || (route === '/' && href === '#/')) {
+      if (href === route || (route === '/' && href === '/')) {
         link.classList.add('nav__link--active');
       } else {
         link.classList.remove('nav__link--active');
@@ -59,10 +82,14 @@
     });
   }
 
-  window.addEventListener('hashchange', navigate);
+  window.addEventListener('popstate', renderRoute);
+
   document.addEventListener('click', (e) => {
-    if (e.target.matches('[data-link]') || e.target.closest('[data-link]')) {
-      closeMenu();
+    const link = e.target.closest('[data-link]');
+    if (link) {
+      e.preventDefault();
+      const href = link.getAttribute('href');
+      if (href) navigateTo(href);
     }
   });
 
@@ -263,8 +290,8 @@
         <h1 class="reveal reveal--delay-1">Your Home Journey <em>Starts Here</em></h1>
         <p class="hero__sub reveal reveal--delay-2">Full-service residential real estate rooted in Northern California. Whether you're buying your first home or selling to start a new chapter, I'm here to guide every step.</p>
         <div class="hero__actions reveal reveal--delay-3">
-          <a href="#/contact" data-link class="btn btn--primary">Schedule a Consultation <span class="btn__arrow">→</span></a>
-          <a href="#/contact" data-link class="btn btn--outline">Get a Home Valuation <span class="btn__arrow">→</span></a>
+          <a href="/contact" data-link class="btn btn--primary">Schedule a Consultation <span class="btn__arrow">→</span></a>
+          <a href="/contact" data-link class="btn btn--outline">Get a Home Valuation <span class="btn__arrow">→</span></a>
         </div>
       </div>
       <div class="hero__indicators">
@@ -291,7 +318,7 @@
             <div class="service-card__body">
               <h3 class="service-card__title">Buyer Representation</h3>
               <p class="service-card__text">Find the home that fits your life. I'll guide you through every step — from search to offer to keys in hand — with the local insight that makes the difference.</p>
-              <a href="#/contact" data-link class="service-card__link">Start Your Search <span>→</span></a>
+              <a href="/contact" data-link class="service-card__link">Start Your Search <span>→</span></a>
             </div>
           </div>
           <div class="service-card reveal reveal--delay-2">
@@ -301,7 +328,7 @@
             <div class="service-card__body">
               <h3 class="service-card__title">Seller Representation</h3>
               <p class="service-card__text">Maximize your home's value with strategic pricing, professional marketing, and expert negotiation. I'll position your property to attract the right buyers at the right price.</p>
-              <a href="#/contact" data-link class="service-card__link">List Your Home <span>→</span></a>
+              <a href="/contact" data-link class="service-card__link">List Your Home <span>→</span></a>
             </div>
           </div>
           <div class="service-card reveal reveal--delay-3">
@@ -311,7 +338,7 @@
             <div class="service-card__body">
               <h3 class="service-card__title">Home Valuations</h3>
               <p class="service-card__text">Curious what your property is worth? Get a comprehensive market analysis backed by local expertise and real-time data from the Sonoma County market.</p>
-              <a href="#/contact" data-link class="service-card__link">Get Your Valuation <span>→</span></a>
+              <a href="/contact" data-link class="service-card__link">Get Your Valuation <span>→</span></a>
             </div>
           </div>
         </div>
@@ -339,7 +366,7 @@
             <div>
               <h4 class="why-card__title">Non-Traditional Transactions</h4>
               <p class="why-card__text">Not every deal fits a conventional mold. I specialize in creative financing strategies — loan assumptions, wrap-around mortgages (subject-to), seller financing, lease options, and land contracts — giving my clients more paths to close.</p>
-              <a href="#/creative-financing" data-link class="service-card__link" style="margin-top: 12px;">Learn More <span>→</span></a>
+              <a href="/creative-financing" data-link class="service-card__link" style="margin-top: 12px;">Learn More <span>→</span></a>
             </div>
           </div>
           <div class="why-card reveal reveal--delay-3">
@@ -411,7 +438,7 @@
         <div class="cta-banner reveal--scale">
           <h2>Ready to Make Your Move?</h2>
           <p>Whether you're buying, selling, or just curious about the market, let's start a conversation. No pressure, just honest guidance.</p>
-          <a href="#/contact" data-link class="btn btn--primary">Let's Talk <span class="btn__arrow">→</span></a>
+          <a href="/contact" data-link class="btn btn--primary">Let's Talk <span class="btn__arrow">→</span></a>
         </div>
       </div>
     </section>
@@ -456,7 +483,7 @@
               What truly sets me apart is my deep knowledge of non-traditional and creative financing strategies. In today's market, conventional isn't always the best path. I specialize in structuring deals using loan assumptions, wrap-around mortgages (subject-to), seller financing, lease options, land contracts, and other creative approaches that open doors traditional financing can't. Whether a buyer needs an alternative path to homeownership or a seller wants to maximize their return through flexible terms, I have the expertise to make it happen.
             </p>
             <div style="margin-top: 32px;">
-              <a href="#/contact" data-link class="btn btn--dark">Work With Me <span class="btn__arrow">→</span></a>
+              <a href="/contact" data-link class="btn btn--dark">Work With Me <span class="btn__arrow">→</span></a>
             </div>
           </div>
         </div>
@@ -494,7 +521,7 @@
         <div class="cta-banner reveal--scale">
           <h2>Let's Start a Conversation</h2>
           <p>Whether you're ready to move or just exploring your options, I'm here to help you make informed decisions about your real estate future.</p>
-          <a href="#/contact" data-link class="btn btn--primary">Schedule a Consultation <span class="btn__arrow">→</span></a>
+          <a href="/contact" data-link class="btn btn--primary">Schedule a Consultation <span class="btn__arrow">→</span></a>
         </div>
       </div>
     </section>
@@ -519,7 +546,7 @@
     <section class="section">
       <div class="section__inner">
         <div class="blog-grid">
-          <div class="blog-card reveal reveal--delay-1" onclick="window.location.hash='#/blog/sonoma-market-2026'">
+          <div class="blog-card reveal reveal--delay-1" onclick="navigateTo('/blog/sonoma-market-2026')">
             <div class="blog-card__img">
               <img src="images/hero-home.jpg" alt="Sonoma County landscape" loading="lazy" />
             </div>
@@ -530,7 +557,7 @@
               <span class="blog-card__meta">May 1, 2026 · 6 min read</span>
             </div>
           </div>
-          <div class="blog-card reveal reveal--delay-2" onclick="window.location.hash='#/blog/best-neighborhoods-santa-rosa'">
+          <div class="blog-card reveal reveal--delay-2" onclick="navigateTo('/blog/best-neighborhoods-santa-rosa')">
             <div class="blog-card__img">
               <img src="images/hero-blog.jpg" alt="Santa Rosa neighborhoods" loading="lazy" />
             </div>
@@ -541,7 +568,7 @@
               <span class="blog-card__meta">April 18, 2026 · 8 min read</span>
             </div>
           </div>
-          <div class="blog-card reveal reveal--delay-3" onclick="window.location.hash='#/blog/first-time-buyer-guide'">
+          <div class="blog-card reveal reveal--delay-3" onclick="navigateTo('/blog/first-time-buyer-guide')">
             <div class="blog-card__img">
               <img src="images/service-buyers.jpg" alt="Home interior" loading="lazy" />
             </div>
@@ -552,7 +579,7 @@
               <span class="blog-card__meta">April 5, 2026 · 10 min read</span>
             </div>
           </div>
-          <div class="blog-card reveal reveal--delay-1" onclick="window.location.hash='#/blog/wine-country-living'">
+          <div class="blog-card reveal reveal--delay-1" onclick="navigateTo('/blog/wine-country-living')">
             <div class="blog-card__img">
               <img src="images/service-valuation.jpg" alt="Sonoma County vineyard" loading="lazy" />
             </div>
@@ -563,7 +590,7 @@
               <span class="blog-card__meta">March 22, 2026 · 7 min read</span>
             </div>
           </div>
-          <div class="blog-card reveal reveal--delay-2" onclick="window.location.hash='#/blog/selling-tips-2026'">
+          <div class="blog-card reveal reveal--delay-2" onclick="navigateTo('/blog/selling-tips-2026')">
             <div class="blog-card__img">
               <img src="images/service-sellers.jpg" alt="Home for sale" loading="lazy" />
             </div>
@@ -574,7 +601,7 @@
               <span class="blog-card__meta">March 10, 2026 · 5 min read</span>
             </div>
           </div>
-          <div class="blog-card reveal reveal--delay-3" onclick="window.location.hash='#/blog/healdsburg-petaluma-guide'">
+          <div class="blog-card reveal reveal--delay-3" onclick="navigateTo('/blog/healdsburg-petaluma-guide')">
             <div class="blog-card__img">
               <img src="images/hero-faq.jpg" alt="Sonoma County landscape" loading="lazy" />
             </div>
@@ -585,7 +612,7 @@
               <span class="blog-card__meta">February 28, 2026 · 9 min read</span>
             </div>
           </div>
-          <div class="blog-card reveal reveal--delay-1" onclick="window.location.hash='#/blog/creative-financing-2026'">
+          <div class="blog-card reveal reveal--delay-1" onclick="navigateTo('/blog/creative-financing-2026')">
             <div class="blog-card__img">
               <img src="images/hero-1.jpg" alt="Sonoma County vineyards" loading="lazy" />
             </div>
@@ -596,7 +623,7 @@
               <span class="blog-card__meta">February 15, 2026 · 8 min read</span>
             </div>
           </div>
-          <div class="blog-card reveal reveal--delay-2" onclick="window.location.hash='#/blog/loan-assumptions-explained'">
+          <div class="blog-card reveal reveal--delay-2" onclick="navigateTo('/blog/loan-assumptions-explained')">
             <div class="blog-card__img">
               <img src="images/hero-2.jpg" alt="Santa Rosa neighborhood" loading="lazy" />
             </div>
@@ -884,11 +911,11 @@
     <section class="section">
       <div class="section__inner">
         <div class="blog-post__content reveal">
-          <a href="#/blog" data-link class="blog-post__back"><span>←</span> Back to Blog</a>
+          <a href="/blog" data-link class="blog-post__back"><span>←</span> Back to Blog</a>
           ${post.content}
           <div style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--gray-200);">
             <p style="font-size: 1rem; color: var(--gray-600);">Have questions about the topics covered here? I'm always happy to chat.</p>
-            <a href="#/contact" data-link class="btn btn--dark" style="margin-top: 16px;">Get in Touch <span class="btn__arrow">→</span></a>
+            <a href="/contact" data-link class="btn btn--dark" style="margin-top: 16px;">Get in Touch <span class="btn__arrow">→</span></a>
           </div>
         </div>
       </div>
@@ -977,7 +1004,7 @@
         <div class="cta-banner reveal--scale">
           <h2>Still Have Questions?</h2>
           <p>I'm always happy to chat — no question is too small, and there's never any obligation.</p>
-          <a href="#/contact" data-link class="btn btn--primary">Let's Talk <span class="btn__arrow">→</span></a>
+          <a href="/contact" data-link class="btn btn--primary">Let's Talk <span class="btn__arrow">→</span></a>
         </div>
       </div>
     </section>
@@ -1333,7 +1360,7 @@
           <h2>Interested in Creative Financing?</h2>
           <p>Every situation is different. Let's talk about your goals and figure out which strategy — or combination of strategies — makes the most sense for you.</p>
           <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative;">
-            <a href="#/contact" data-link class="btn btn--primary">Schedule a Consultation <span class="btn__arrow">→</span></a>
+            <a href="/contact" data-link class="btn btn--primary">Schedule a Consultation <span class="btn__arrow">→</span></a>
             <a href="tel:+17075833304" class="btn btn--outline" style="border-color: rgba(255,255,255,0.35); color: white;">Call (707) 583-3304</a>
           </div>
         </div>
@@ -1352,43 +1379,7 @@
     '/creative-financing': creativeFinancingPage,
   };
 
-  // Handle blog post routes dynamically
-  const originalNavigate = navigate;
-  window.removeEventListener('hashchange', navigate);
-
-  function routeHandler() {
-    closeMenu();
-    const route = getRoute();
-
-    if (route.startsWith('/blog/')) {
-      const slug = route.replace('/blog/', '');
-      app.innerHTML = '';
-      app.className = 'page-transition';
-      app.innerHTML = blogPostPage(slug);
-      window.scrollTo(0, 0);
-      updateActiveLink('/blog');
-      initScrollReveal();
-      initParallax();
-      return;
-    }
-
-    const page = routes[route] || routes['/'];
-    app.innerHTML = '';
-    app.className = 'page-transition';
-    app.innerHTML = page();
-    window.scrollTo(0, 0);
-    updateActiveLink(route);
-    initScrollReveal();
-    initFAQ();
-    initParallax();
-    initCountUp();
-    initContactForm();
-    initHeroCarousel();
-  }
-
-  window.addEventListener('hashchange', routeHandler);
-
   // ── INIT ──
-  routeHandler();
+  renderRoute();
 
 })();
