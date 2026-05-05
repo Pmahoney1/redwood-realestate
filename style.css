@@ -1091,6 +1091,16 @@ h4 { font-size: clamp(1.1rem, 1.5vw, 1.4rem); }
   color: rgba(255,255,255,0.5);
   line-height: 1.7;
 }
+.footer__logo {
+  margin-top: 24px;
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.7;
+  filter: brightness(1.8);
+  transition: opacity 0.3s ease;
+}
+.footer__logo:hover { opacity: 0.9; }
 .footer__heading {
   font-family: var(--font-heading);
   font-size: 1.1rem;

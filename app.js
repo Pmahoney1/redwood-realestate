@@ -379,7 +379,7 @@
         <div class="section__header section__header--center reveal">
           <span class="section__label" style="color: var(--green-300);">Client Stories</span>
           <h2 style="color: var(--white);">What My Clients <span style="color: var(--green-300);"><em>Say</em></span></h2>
-          <p class="section__subtitle" style="color: rgba(255,255,255,0.6);">Every transaction is a relationship. Here's what people say about working with Redwood Real Estate Solutions.</p>
+          <p class="section__subtitle" style="color: rgba(255,255,255,0.6);">Every transaction is a relationship. Here's what people say about working with Redwood Real Estate.</p>
         </div>
         <div class="testimonials-slider">
           <div class="testimonial-card reveal reveal--delay-1">
@@ -446,7 +446,7 @@
               Real estate isn't just my career — it's my calling. Growing up in Northern California, I developed a deep appreciation for the communities, landscapes, and neighborhoods that make this region unlike anywhere else.
             </p>
             <p style="margin-top: 16px; color: var(--gray-600); line-height: 1.85; font-size: 1.05rem;">
-              I founded Redwood Real Estate Solutions with a simple philosophy: every client deserves the same level of dedication, transparency, and expertise — whether you're buying your first condo or selling a vineyard estate.
+              I founded Redwood Real Estate with a simple philosophy: every client deserves the same level of dedication, transparency, and expertise — whether you're buying your first condo or selling a vineyard estate.
             </p>
             <p style="margin-top: 16px; color: var(--gray-600); line-height: 1.85; font-size: 1.05rem;">
               With years of experience across Sonoma, Marin, Napa, and Mendocino counties, I bring a level of local market knowledge that only comes from truly knowing the land. My clients don't just get a realtor — they get a trusted advisor who's invested in their success long after closing day.
