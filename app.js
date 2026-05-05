@@ -275,28 +275,6 @@
       </div>
     </section>
 
-    <!-- STATS -->
-    <section class="stats">
-      <div class="stats__inner">
-        <div class="stats__item">
-          <div class="stats__number" data-count="150" data-suffix="+">0+</div>
-          <div class="stats__label">Homes Sold</div>
-        </div>
-        <div class="stats__item">
-          <div class="stats__number" data-count="98" data-suffix="%">0%</div>
-          <div class="stats__label">Client Satisfaction</div>
-        </div>
-        <div class="stats__item">
-          <div class="stats__number" data-count="15" data-suffix="+">0+</div>
-          <div class="stats__label">Years Experience</div>
-        </div>
-        <div class="stats__item">
-          <div class="stats__number" data-prefix="$" data-count="85" data-suffix="M+">$0M+</div>
-          <div class="stats__label">In Sales Volume</div>
-        </div>
-      </div>
-    </section>
-
     <!-- SERVICES -->
     <section class="section">
       <div class="section__inner">
