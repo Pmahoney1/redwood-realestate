@@ -4,3 +4,10 @@ images/service-*.png
 hero-home.jpg
 hero-blog-new*
 hero-faq-new*
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
